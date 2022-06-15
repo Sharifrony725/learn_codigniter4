@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title><?php  echo $page_title; ?></title>
 </head>
 
 <body>
 
-    <h1><?= esc($title) ?></h1>
+    <h1>This is header</h1>
