@@ -38,10 +38,19 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/blogs', 'Blog::index');
-$routes->get('/mycons', 'Mycon::index');
-$routes->get('/mycons/test', 'Mycon::test');
-$routes->get('/mycons/reTest', 'Mycon::reTest/rony');
+$routes->get('/test', 'Home::test');
+$routes->get('/login', 'Admin::index');
+$routes->get('/addpost', 'Admin::addpost');
+$routes->get('/addcat', 'Admin::category');
+$routes->add('user-login/(:alpha)/(:any)' , 'Admin::login/$1/$2');
+//user view routes
+$routes->get('/all-users', 'UserController::index');
+
+
+// $routes->get('/blogs', 'Blog::index');
+// $routes->get('/mycons', 'Mycon::index');
+// $routes->get('/mycons/test', 'Mycon::test');
+// $routes->get('/mycons/reTest', 'Mycon::reTest/rony');
 
 /*
  * --------------------------------------------------------------------
