@@ -45,6 +45,9 @@ $routes->get('/addcat', 'Admin::category');
 $routes->add('user-login/(:alpha)/(:any)' , 'Admin::login/$1/$2');
 //user view routes
 $routes->get('/all-users', 'UserController::index');
+$routes->get('/add-users', 'FormController::index');
+$routes->post('/add-users', 'FormController::index');
+
 
 
 // $routes->get('/blogs', 'Blog::index');

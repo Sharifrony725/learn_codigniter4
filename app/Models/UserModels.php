@@ -17,4 +17,14 @@ class UserModels extends Model
             return false;
         }
     }
+    public function addData($data){
+        $db = \Config\Database::connect();
+        $create =  $db->table('users');
+        $res =  $create->insert($data);
+        if($res){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
