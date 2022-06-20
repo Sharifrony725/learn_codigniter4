@@ -10,33 +10,33 @@
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Mobile</th>
+                                    <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <?php if (count($allData) > 0) { ?>
-                                <?php foreach ($allData as  $sdata) { ?>
+                            <?php if (is_array($allData)) : ?>
+                                <?php foreach ($allData as $sdata) : ?>
                                     <tbody>
                                         <tr>
                                             <td><?php echo $sdata->id ?></td>
                                             <td><?php echo $sdata->name ?></td>
                                             <td><?php echo $sdata->email ?></td>
                                             <td><?php echo $sdata->mobile ?></td>
+                                            <td><img src="<?= base_url(); ?>/img/<?= $sdata->image; ?>" height="100px" width="150px" alt="" srcset=""></td>
                                             <td>
                                                 <a href="http://" class="btn btn-primary btn-sm">Edit</a>
                                                 <a href="http://" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                     </tbody>
-                                <?php  } ?>
-                            <?php  }else {
-                                echo "Data not Found";
-                            } ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </table>
                         <div>
                         </div>

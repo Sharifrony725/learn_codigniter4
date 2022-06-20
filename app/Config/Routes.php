@@ -38,6 +38,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/register-form', 'Home::submit_form');
 $routes->get('/test', 'Home::test');
 $routes->get('/login', 'Admin::index');
 $routes->get('/addpost', 'Admin::addpost');
@@ -47,6 +48,7 @@ $routes->add('user-login/(:alpha)/(:any)' , 'Admin::login/$1/$2');
 $routes->get('/all-users', 'UserController::index');
 $routes->get('/add-users', 'FormController::index');
 $routes->post('/add-users', 'FormController::index');
+$routes->add('/add-file', 'FileCon::addImg');
 
 
 

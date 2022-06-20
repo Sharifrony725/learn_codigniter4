@@ -1,6 +1,8 @@
 <?php $pages = session(); ?>
+
 <?= $this->extend('static/base'); ?>
 <?= $this->Section('content'); ?>
+
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -69,4 +71,5 @@
         </div>
     </div>
 </section>
+
 <?= $this->endSection(); ?>
