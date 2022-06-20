@@ -19,6 +19,8 @@
             <div class="float-right">
                 <ul class="navbar-nav">
 
+                    <li><a href="<?= base_url(); ?>/login" class="nav-link">Login</a></li>
+                    <li><a href="<?= base_url(); ?>/sign-up" class="nav-link">Sign Up</a></li>
                     <li><a href="<?= base_url(); ?>/add-file" class="nav-link">Add Image</a></li>
                     <li><a href="<?= base_url(); ?>/all-users" class="nav-link">All Users</a></li>
                     <li><a href="<?= base_url(); ?>/add-users" class="nav-link">Add Users</a></li>

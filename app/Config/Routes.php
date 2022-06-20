@@ -40,7 +40,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/register-form', 'Home::submit_form');
 $routes->get('/test', 'Home::test');
-$routes->get('/login', 'Admin::index');
+//$routes->get('/login', 'Admin::index');
 $routes->get('/addpost', 'Admin::addpost');
 $routes->get('/addcat', 'Admin::category');
 $routes->add('user-login/(:alpha)/(:any)' , 'Admin::login/$1/$2');
@@ -50,7 +50,10 @@ $routes->get('/add-users', 'FormController::index');
 $routes->post('/add-users', 'FormController::index');
 $routes->add('/add-file', 'FileCon::addImg');
 
-
+//login sign up routes
+$routes->get('/login' , 'EmailCon::index');
+$routes->get('/sign-up' , 'EmailCon::signUp');
+$routes->post('/sign-up' , 'EmailCon::signUp');
 
 // $routes->get('/blogs', 'Blog::index');
 // $routes->get('/mycons', 'Mycon::index');
