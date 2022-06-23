@@ -24,7 +24,7 @@
                     <li><a href="<?= base_url(); ?>/add-file" class="nav-link">Add Image</a></li>
                     <li><a href="<?= base_url(); ?>/all-users" class="nav-link">All Users</a></li>
                     <li><a href="<?= base_url(); ?>/add-users" class="nav-link">Add Users</a></li>
-                    <li><a href="<?= base_url(); ?>/register-form" class="nav-link">Register Form </a></li>
+                    <li><a href="<?= base_url(); ?>/register-form" class="nav-link">Add Customer </a></li>
                     <li><a href="<?= base_url(); ?>/addpost" class="nav-link">Add Post</a></li>
                     <li><a href="<?= base_url(); ?>/addcat" class="nav-link">Add Category</a></li>
                     <li><a href="#/" class="nav-link">Login</a></li>

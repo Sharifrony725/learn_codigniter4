@@ -70,7 +70,19 @@
                                         <input type="text" class="form-control" name="thana" placeholder="Thana">
                                     </div>
                                 </div>
-                                <div class="form-group row" style="padding-top: 70px;">
+                                <div class="form-group row  ml-5">
+                                    <label class="btn btn-secondary dropdown-toggle col-for-label col-md-4 text-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown Menu
+                                    </label>
+                                    <div class="dropdown-menu col-md-8" aria-labelledby="dropdownMenuButton">
+                                        <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu1"> Menu1 </label><br>
+                                        <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu2"> Menu2 </label><br>
+                                        <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu3"> Menu3 </label><br>
+                                        <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu3"> Menu4 </label><br>
+                                        <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu3"> Menu5 </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="" class="col-for-label col-md-4 text-right">Verification Status :</label>
                                     <div class="col-md-8">
                                         <label for="">
@@ -78,6 +90,8 @@
                                         <label> <input type="radio" name="verification[]" id="" value="no" checked> No </label>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                         <div class="float-right">

@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <?php 
-                    $session = session();
-                    $session->getTempdata('msg');
-                    if ($session->getTempdata('msg')): ?>
-                 <h1><?= $session->getTempdata('msg');  ?></h1>
-                 <?php  endif ;?>
+                <?php
+                $session = session();
+                $session->getTempdata('msg');
+                if ($session->getTempdata('msg')) : ?>
+                    <h1><?= $session->getTempdata('msg');  ?></h1>
+                <?php endif; ?>
                 <?= form_open(); ?>
                 <div class="card">
                     <div class="card-header text-center">
@@ -31,7 +31,7 @@
                         <div class="form-group row">
                             <label for="" class="col-for-label col-md-3">Mobile</label>
                             <div class="col-md-9 ">
-                                <input type="number" name="number" class="form-control" placeholder="Mobile" value="<?= set_value('mobile'); ?>">
+                                <input type="number" name="mobile" class="form-control" placeholder="Mobile" value="<?= set_value('mobile'); ?>">
                             </div>
                         </div>
 
