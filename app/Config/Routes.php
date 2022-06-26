@@ -39,6 +39,7 @@ $routes->set404Override();
  //service route start   
  $routes->add('add_service', 'Service::tajtech_service_form1');
  $routes->get('add_service_type', 'Service::tajtech_service_type_form');
+ $routes->get('invoice', 'Service::invoice');
  $routes->post('add_service_type', 'Service::save_service_type_data');
  //service route start end
 // We get a performance increase by specifying the default

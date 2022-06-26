@@ -20,6 +20,10 @@ class Service extends BaseController
     {
         return  view('service/service_type_form');
     }
+    public function invoice()
+    {
+        return  view('service/invoice_details');
+    }
     public function tajtech_service_form1()
     {
         $service_model = new ServiceModel();
