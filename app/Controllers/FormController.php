@@ -32,7 +32,7 @@ class FormController extends BaseController
                     $page_session->setTempdata('success', 'User save successfully.', 2);
                     return redirect()->to(current_url());
                 } else {
-                    $page_session->setTempdata('failed', 'User save failed.', 2);
+                    $page_session->setTempdata('wrong', 'User save failed.', 2);
                     return redirect()->to(current_url());
                 }
             } else {

@@ -70,11 +70,20 @@
                                         <input type="text" class="form-control" name="thana" placeholder="Thana">
                                     </div>
                                 </div>
-                                <div class="form-group row  ml-5">
+
+                                <div class="form-group row dropup ml-5">
                                     <label class="btn btn-secondary dropdown-toggle col-for-label col-md-4 text-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Dropdown Menu
                                     </label>
                                     <div class="dropdown-menu col-md-8" aria-labelledby="dropdownMenuButton">
+                                        <div class="input-group">
+                                            <div class="form-outline">
+                                                <input type="search" id="form1" class="form-control" />
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
                                         <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu1"> Menu1 </label><br>
                                         <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu2"> Menu2 </label><br>
                                         <label class="ml-3"> <input type="checkbox" name="verification[]" id="" value="menu3"> Menu3 </label><br>
@@ -103,4 +112,23 @@
         </div>
     </div>
 </section>
+<script>
+    const searchInputDropdown = document.getElementById('#form1');
+    const dropdownOptions = document.querySelectorAll('.input-group-dropdown-item');
+
+    searchInputDropdown.addEventListener('input', () => {
+                const filter = searchInputDropdown.value.toLowerCase();
+                showOptions();
+                const valueExist = !!filter.length;
+
+                if (valueExist) {
+                    dropdownOptions.forEach((el) => {
+                        const elText = el.textContent.trim().toLowerCase();
+                        const isIncluded = elText.includes(filter);
+                        if (!isIncluded) {
+                            el.style.display = 'none';
+                        }
+                    });
+                }
+</script>
 <?= $this->endSection(); ?>
